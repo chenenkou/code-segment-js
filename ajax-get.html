@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax-get + check-all</title>
+</head>
+<body>
+<div class="main">
+    <div>
+        <div>
+            <div>
+                <button class="btn ajax-post confirm" url="" target-form="ids">删 除</button>
+            </div>
+        </div>
+        <!-- 数据列表 -->
+        <div>
+            <table>
+                <thead>
+                <tr>
+                    <th><input class="check-all" type="checkbox"></th>
+                    <th>UID</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input class="ids" type="checkbox" name="id[]" value="9"></td>
+                    <td>9</td>
+                    <td><a href="/?s=/admin/user/changestatus/method/forbidUser/id/9" class="ajax-get">禁用</a>
+                        <a href="/?s=/admin/auth_manager/group/uid/9" class="confirm ajax-get">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input class="ids" type="checkbox" name="id[]" value="8"></td>
+                    <td>8</td>
+                    <td><a href="/id/8" class="ajax-get">禁用</a>
+                        <a href="/uid/8" class="confirm ajax-get">删除</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/method-ajax.js"></script>
+<script src="js/check-all.js"></script>
+</body>
+</html>
